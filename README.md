@@ -1,43 +1,21 @@
-# 🤖 ROS2-Based Screw Propelled Autonomous Amphibious Robot
+# ROS2-Based Screw Propelled Autonomous Amphibious Robot
 
-<p align="center">
-  <img src="docs/images/robot_preview.png" alt="Amphibious Robot" width="600"/>
-</p>
 
-> **Mini Project Report** — B.Tech in Robotics and Automation  
-> Adi Shankara Institute of Engineering and Technology, Kalady  
-> APJ Abdul Kalam Technological University | December 2024
-
----
-
-## 👥 Team
-
-| Name | Roll No |
-|------|---------|
-| Akshay Raj B | ASI22RA010 |
-| Nandana Sunil | ASI22RA038 |
-| Sneha Alphonso Francis | ASI22RA041 |
-| Swaroop S | ASI22RA047 |
-
-**Guide:** Mr. Sreedeep Krishnan, Associate Professor, Dept. of Robotics and Automation
-
----
-
-## 📌 Project Overview
+## Project Overview
 
 This project introduces a **ROS2-based Screw Propelled Amphibious Robot** capable of navigating both terrestrial and aquatic environments autonomously. The robot uses a unique helical screw-wheel mechanism that allows seamless transition between land, water, mud, and sand — without any mechanical reconfiguration.
 
 ### Key Features
-- 🌊 Dual-terrain locomotion (land + water) using screw-propelled wheels
-- 🧠 Autonomous navigation via **ROS2 + SLAM**
-- 📡 Real-time sensing with **LiDAR** and **ZED 2i Stereo Camera**
-- 📱 Bluetooth-based manual override via smartphone
-- 🖥️ Gazebo simulation support
-- ⚡ Powered by **Raspberry Pi 4B** + **Arduino Uno**
+- Dual-terrain locomotion (land + water) using screw-propelled wheels
+- Autonomous navigation via **ROS2 + SLAM**
+- Real-time sensing with **LiDAR** and **ZED 2i Stereo Camera**
+- Bluetooth-based manual override via smartphone
+- Gazebo simulation support
+- Powered by **Raspberry Pi 4B** + **Arduino Uno**
 
 ---
 
-## 🏗️ Repository Structure
+## Repository Structure
 
 ```
 amphibious_bot/
@@ -66,7 +44,7 @@ amphibious_bot/
 
 ---
 
-## ⚙️ Hardware Components
+## Hardware Components
 
 | Component | Specification |
 |-----------|--------------|
@@ -82,7 +60,7 @@ amphibious_bot/
 
 ---
 
-## 🔩 Locomotion Modes
+## Locomotion Modes
 
 ### 1. Screw Propulsion Mode
 Used for deformable terrains — water, mud, clay, sand.
@@ -97,7 +75,7 @@ Used for rigid/uneven surfaces — rocky terrain.
 
 ---
 
-## 📐 Mathematical Model (Kinematics)
+## Mathematical Model (Kinematics)
 
 With the chassis frame `xc Oc yc` and helix angle = 45°:
 
@@ -122,7 +100,7 @@ Where:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - ROS2 (Humble or later)
@@ -170,7 +148,7 @@ ros2 launch amphibot_description gazebo.launch.py
 
 ---
 
-## 📱 Bluetooth Control Commands
+## Bluetooth Control Commands
 
 | Command | Action |
 |---------|--------|
@@ -182,17 +160,17 @@ ros2 launch amphibot_description gazebo.launch.py
 
 ---
 
-## 🎯 Applications
+## Applications
 
-- 🆘 **Flood rescue & disaster response** — navigates debris, mud, and flooded zones
-- 🏗️ **Dam & infrastructure inspection** — 3D mapping of walls and underwater tunnels
-- 🌿 **Environmental monitoring** — wetlands, water quality, invasive species detection
-- 🪖 **Defense & surveillance** — river/swamp patrol with stealth capabilities
-- 🌾 **Aquaculture & agriculture** — field irrigation canals and offshore modules
+- **Flood rescue & disaster response** — navigates debris, mud, and flooded zones
+- **Dam & infrastructure inspection** — 3D mapping of walls and underwater tunnels
+- **Environmental monitoring** — wetlands, water quality, invasive species detection
+- **Defense & surveillance** — river/swamp patrol with stealth capabilities
+- **Aquaculture & agriculture** — field irrigation canals and offshore modules
 
 ---
 
-## 🏆 Funding & Achievements
+## Funding & Achievements
 
 - Funded by **Kerala Technological University** via **Research Seed Money (RSM)**
 - Review paper submitted to **IEEE** conference:  
@@ -200,12 +178,8 @@ ros2 launch amphibot_description gazebo.launch.py
 
 ---
 
-## 📄 License
+##  License
 
 This project is submitted as an academic mini-project under APJ Abdul Kalam Technological University. All rights reserved by the authors.
 
 ---
-
-## 🙏 Acknowledgements
-
-We thank **God Almighty**, our guide **Mr. Sreedeep Krishnan**, project coordinators **Dr. Athira** and **Mr. Sreedeep Krishnan**, Principal **Dr. M S Murali**, and HOD **Dr. Vinila M L** for their invaluable support.
