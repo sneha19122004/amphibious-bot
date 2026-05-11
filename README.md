@@ -1,23 +1,5 @@
 # ROS2-Based Screw Propelled Autonomous Amphibious Robot
 
-> **Mini Project Report** — B.Tech in Robotics and Automation  
-> Adi Shankara Institute of Engineering and Technology, Kalady  
-> APJ Abdul Kalam Technological University | December 2024
-
----
-
-## Team
-
-| Name | Roll No |
-|------|---------|
-| Akshay Raj B | ASI22RA010 |
-| Nandana Sunil | ASI22RA038 |
-| Sneha Alphonso Francis | ASI22RA041 |
-| Swaroop S | ASI22RA047 |
-
-**Guide:** Mr. Sreedeep Krishnan, Associate Professor, Dept. of Robotics and Automation
-
----
 
 ## Project Overview
 
@@ -247,7 +229,3 @@ ros2 launch amphibot_description gazebo.launch.py       # Gazebo only
 This project is submitted as an academic mini-project under APJ Abdul Kalam Technological University. All rights reserved by the authors.
 
 ---
-
-## Acknowledgements
-
-We thank our guide **Mr. Sreedeep Krishnan**, project coordinators **Dr. Athira** and **Mr. Sreedeep Krishnan**, Principal **Dr. M S Murali**, and HOD **Dr. Vinila M L** for their invaluable support.
