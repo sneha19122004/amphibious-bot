@@ -1,0 +1,41 @@
+# ── ROS2 build artefacts ──────────────────────────────────────
+build/
+install/
+log/
+.colcon_install_layout
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+.eggs/
+
+# ── Arduino IDE ───────────────────────────────────────────────
+*.elf
+*.hex
+*.bin
+*.map
+
+# ── OS files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editors ───────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Gazebo & simulation logs ──────────────────────────────────
+~/.gazebo/
+*.bag
+*.db3
+*.mcap
+
+# ── Misc ──────────────────────────────────────────────────────
+*.orig
+*.bak

@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!--
+  amphibot.gazebo
+  ───────────────
+  Gazebo-specific XACRO macros for the Amphibious Bot.
+  Include this file from amphibot.xacro:
+      <xacro:include filename="$(find amphibot_description)/urdf/amphibot.gazebo" />
+
+  Contains:
+    • diff_drive Gazebo plugin  (wheel control + odometry)
+    • Material and friction properties for each link
+-->
+<robot name="amphibot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:property name="body_color" value="Gazebo/Silver" />
+
+  <!-- ═══════════════════════════════════════════════════════════
+       Differential Drive Plugin
+       Subscribes to  /cmd_vel  (geometry_msgs/Twist)
+       Publishes      /odom     (nav_msgs/Odometry)
+       ═══════════════════════════════════════════════════════════ -->
+  <gazebo>
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+
+      <!-- Wheel joints (must match joint names in amphibot.xacro) -->
+      <left_joint>Revolute 8</left_joint>
+      <right_joint>Revolute 9</right_joint>
+
+      <!-- Physical wheel parameters (metres) -->
+      <wheel_separation>0.3</wheel_separation>
+      <wheel_diameter>0.29</wheel_diameter>
+
+      <!-- Actuator limits -->
+      <max_wheel_torque>200</max_wheel_torque>
+      <max_wheel_acceleration>10.0</max_wheel_acceleration>
+
+      <!-- TF / Odometry output -->
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+
+    </plugin>
+  </gazebo>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       Link material & contact properties
+       ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Chassis -->
+  <gazebo reference="base_link">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+    <gravity>true</gravity>
+  </gazebo>
+
+  <!-- Camera mount -->
+  <gazebo reference="camera_link_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+  </gazebo>
+
+  <!-- LiDAR mount -->
+  <gazebo reference="lidar_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+  </gazebo>
+
+  <!-- Left screw wheel -->
+  <gazebo reference="left_wheel_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+  </gazebo>
+
+  <!-- Right screw wheel -->
+  <gazebo reference="wheel_v1_1">
+    <material>${body_color}</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <self_collide>true</self_collide>
+  </gazebo>
+
+</robot>
